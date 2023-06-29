@@ -1,5 +1,16 @@
 Web VPython 3.2
 
+'''
+Simple 1D motion with acceleration
+
+Box moves with acceleration.
+
+Change
+1. initial position of the box
+2. initial velocity of the box
+3. acceleration of the box
+'''
+
 # from vpython import *  # If running on Python
 
 # Initialize your vectors
@@ -14,12 +25,12 @@ t = 0; dt = 0.1; tMax = 5
 scene = canvas(width=600, height=300, autoscale = False)
 
 # Make a box at position xi and name it 'block'
+# 'vel' and 'acc' are properties of 'block' (object-oriented programming).
 #block = box(pos=xi, vel=vi, acc=ai)
 block = box(pos=xi)
-block.vel = vi  # Give a velocity to 'block'. 
+block.vel = vi  # Give a velocity to 'block'.
 block.acc = ai
 block.color = color.green
-# 'vel' and 'acc' are properties of 'block' (object-oriented programming).
 
 # Create a graph
 gd = graph(width=600, height=200, xmin=0, xmax=tMax, xtitle='Time', ytitle='Position')
